@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- LÓGICA DO HEADER DINÂMICO ---
+   
     const header = document.getElementById('main-header');
     const scrollProgressBar = document.querySelector('.scroll-progress-bar');
     const handleScroll = () => {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // --- LÓGICA DE ANIMAÇÃO DAS BARRAS DE HABILIDADE ---
+    
     const skillObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     document.querySelectorAll('.skill-card-detailed').forEach(card => { skillObserver.observe(card); });
 
-    // --- EFEITO 3D TILT NOS CARDS ---
+  
     VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
         max: 15,
         speed: 400,
@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "max-glare": 0.2
     });
 
-    // --- EFEITO MAGNÉTICO NOS ÍCONES SOCIAIS ---
     const socialLinks = document.querySelectorAll('.social-links a');
     socialLinks.forEach(link => {
         link.addEventListener('mousemove', (e) => {
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- CURSOR, PRELOADER, TEMA, ETC. (RESTANTE DO CÓDIGO) ---
+  
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
     window.addEventListener('mousemove', (e) => {
@@ -105,4 +104,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     loadParticles(body.classList.contains('dark-mode'));
+
 });
