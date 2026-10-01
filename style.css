@@ -18,7 +18,7 @@
   box-sizing:border-box
 }
 html {
-  scroll-behavior:smooth;
+  scroll-behavior:auto;
   scroll-padding-top:95px
 }
 body {
@@ -1899,8 +1899,8 @@ h1,h2,h3,p {
 }
 
 .js .reveal {
-  opacity:0;
-  transform:translateY(25px)
+  opacity:.98;
+  transform:translateY(8px)
 }
 
 .js .reveal.in-view {
@@ -1915,3 +1915,4 @@ h1,h2,h3,p {
 }
 
 }
+
