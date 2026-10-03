@@ -14,12 +14,15 @@
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://arthurcybsec.github.io/ArthurSoaresCybSec.github.io/">
   <link rel="icon" href="cyber.ico" sizes="any">
+  <script>try{const savedTheme=localStorage.getItem('arthur-theme');document.documentElement.dataset.theme=savedTheme==='light'||savedTheme==='dark'?savedTheme:(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark')}catch(_){document.documentElement.dataset.theme='dark'}</script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="enhance.css">
   <script src="app.js" defer></script>
   <title>Arthur Soares — Cibersegurança, Blue Team & TI</title>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
   <div class="site-grid" aria-hidden="true"></div>
   <header class="site-header" id="topo">
     <div class="container header-inner">
@@ -34,6 +37,11 @@
         <a href="#competencias">Competências</a>
         <a class="nav-contact" href="#contato">Contato <span aria-hidden="true">↗</span></a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema claro" aria-pressed="false" title="Alternar tema claro e escuro">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 14.3A8.8 8.8 0 0 1 9.7 3.4 8.8 8.8 0 1 0 20.6 14.3Z"/></svg>
+        <span class="theme-label">TEMA</span>
+      </button>
     </div>
   </header>
 
@@ -42,13 +50,14 @@
       <div class="hero-halo" aria-hidden="true"></div>
       <div class="container hero-layout">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="signal-dot"></span> SANTOS, SP <span class="eyebrow-divider">/</span> BLUE TEAM EM CONSTRUÇÃO</p>
+          <p class="eyebrow"><span class="signal-dot"></span> SANTOS, SP <span class="eyebrow-divider">/</span> CIBERSEGURANÇA APLICADA</p>
           <h1 id="hero-title">Transformo<br><span class="muted-line">curiosidade em</span><br><span class="accent-word">defesa digital<span class="period">.</span></span></h1>
           <p class="hero-lead">Sou Arthur Soares. Graduado em Cibersegurança e estagiário de TI, conecto a rotina de suporte e infraestrutura à investigação de eventos, redes e resposta a incidentes.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
             <a class="button button-ghost" href="#sobre">Conheça minha trajetória <span aria-hidden="true">↓</span></a>
           </div>
+          <p class="hero-live" aria-hidden="true"><span class="hero-prompt">&gt;</span> foco atual <span class="hero-live-arrow">/</span> <span id="rotating-focus">análise de eventos</span><span class="hero-cursor">_</span></p>
           <div class="hero-proof" aria-label="Resumo profissional">
             <span><b>01</b> Graduação concluída</span>
             <span><b>02</b> Estágio em TI</span>
@@ -58,7 +67,7 @@
         <div class="hero-visual reveal" aria-label="Retrato de Arthur Soares com elementos visuais de análise de segurança">
           <div class="visual-frame">
             <div class="visual-scanline" aria-hidden="true"></div>
-            <div class="visual-top"><span><i></i> ANALYST PROFILE</span><span>STATUS: LEARNING</span></div>
+            <div class="visual-top"><span><i></i> ANALYST PROFILE</span><span>FOCUS: DETECTION</span></div>
             <div class="portrait-orbit orbit-one" aria-hidden="true"></div>
             <div class="portrait-orbit orbit-two" aria-hidden="true"></div>
             <div class="portrait-wrap"><img src="arthur-soares.jpg" alt="Arthur Soares" width="740" height="740" fetchpriority="high"></div>
@@ -74,12 +83,14 @@
 
     <div class="marquee-band" aria-hidden="true"><div>OBSERVAR <span>✳</span> INVESTIGAR <span>✳</span> DOCUMENTAR <span>✳</span> MELHORAR <span>✳</span> OBSERVAR <span>✳</span> INVESTIGAR <span>✳</span> DOCUMENTAR <span>✳</span> MELHORAR <span>✳</span></div></div>
 
+    <div class="signal-strip" aria-label="Áreas de interesse"><div class="container signal-strip-inner"><span class="signal-strip-label">SIGNAL / 001</span><span>BLUE TEAM <i></i> TRIAGEM DE LOGS</span><span>REDES <i></i> AUTOMAÇÃO</span><span>SUPORTE <i></i> SEGURANÇA</span><span class="signal-strip-end">APRENDIZADO CONTÍNUO ↗</span></div></div>
+
     <section class="section section-about" id="sobre" aria-labelledby="about-title">
       <div class="container">
         <div class="section-heading reveal"><span class="section-number">01 / SOBRE MIM</span><div><h2 id="about-title">Uma base em TI.<br><em>Um olhar para segurança.</em></h2><p>Construindo a ponte entre manter sistemas funcionando e entender os sinais que eles produzem.</p></div></div>
         <div class="about-grid">
           <div class="about-statement reveal"><span class="statement-mark" aria-hidden="true">“</span><p>Gosto de entender <strong>como as coisas funcionam</strong> antes de pensar em como protegê-las.</p><div class="statement-foot"><span class="line"></span> ARTHUR SOARES / SOBRE A PRÁTICA</div></div>
-          <div class="about-body reveal"><p>Sou graduado em <strong>Cibersegurança</strong> e atualmente faço estágio de TI em uma faculdade. No dia a dia, desenvolvo minha base em suporte, sistemas e redes; fora dele, transformo o aprendizado em projetos públicos e reproduzíveis.</p><p>Meu interesse está em <strong>Blue Team e SOC</strong>: compreender eventos, correlacionar sinais, investigar hipóteses e comunicar achados com clareza. Estou me preparando para a <strong>CompTIA Security+</strong> — ainda em estudo, não certificada.</p><div class="fact-list"><div><span>LOCALIZAÇÃO</span><strong>Santos, São Paulo</strong></div><div><span>ATUAÇÃO ATUAL</span><strong>Estágio em TI</strong></div><div><span>FORMAÇÃO</span><strong>Graduação em Cibersegurança concluída</strong></div></div></div>
+          <div class="about-body reveal"><p>Sou graduado em <strong>Cibersegurança</strong> e atualmente faço estágio de TI em uma faculdade. No dia a dia, desenvolvo minha base em suporte, sistemas e redes; fora dele, transformo o aprendizado em projetos públicos e reproduzíveis.</p><p>Meu interesse está em <strong>Blue Team e SOC</strong>: compreender eventos, correlacionar sinais, investigar hipóteses e comunicar achados com clareza. Estou me preparando para a <strong>CompTIA Security+</strong> — a certificação ainda não foi obtida.</p><div class="fact-list"><div><span>LOCALIZAÇÃO</span><strong>Santos, São Paulo</strong></div><div><span>ATUAÇÃO ATUAL</span><strong>Estágio em TI</strong></div><div><span>FORMAÇÃO</span><strong>Graduação em Cibersegurança concluída</strong></div></div></div>
         </div>
       </div>
     </section>
@@ -90,7 +101,7 @@
 
         <div class="project-feature reveal">
           <div class="project-feature-copy"><div class="project-topline"><span>01 / INCIDENT RESPONSE</span><span class="project-state"><i></i> APP FUNCIONAL</span></div><div class="project-icon" aria-hidden="true"><span>IR</span><span class="icon-corner">↗</span></div><h3>Incident Response<br>Workbench</h3><p>Uma estação de triagem que lê logs Windows e Linux no navegador, organiza eventos em uma linha do tempo, explica sinais suspeitos e gera relatórios de investigação.</p><div class="project-tags"><span>JavaScript</span><span>Log analysis</span><span>HTML / CSS</span><span>Testes & CI</span></div><a class="project-action" href="https://github.com/ArthurCybSec/Incident-Response-Workbench" target="_blank" rel="noopener noreferrer">Explorar projeto <span aria-hidden="true">↗</span></a></div>
-          <div class="project-preview preview-workbench" aria-label="Ilustração da interface do Incident Response Workbench"><div class="preview-window"><div class="preview-title"><span><i></i><i></i><i></i></span> IR WORKBENCH <b>LOCAL ANALYSIS</b></div><div class="preview-head"><small>CASE / INVESTIGATION</small><strong>Da observação<br>à evidência.</strong></div><div class="preview-metrics"><span><small>EVENTOS</small><b>16</b></span><span><small>SINALIZADOS</small><b>15</b></span><span><small>CRÍTICOS</small><b>01</b></span></div><div class="preview-timeline"><span><i></i> 09:00:00 <b>Falha de autenticação</b><em>MÉDIA</em></span><span><i></i> 09:04:00 <b>Múltiplas falhas</b><em>ALTA</em></span><span><i></i> 09:05:00 <b>Acesso após falhas</b><em>ALTA</em></span><span><i></i> 09:12:00 <b>Log de auditoria limpo</b><em>CRÍTICA</em></span></div></div><span class="preview-watermark">01</span></div>
+          <div class="project-preview preview-workbench"><div class="real-preview"><div class="real-preview-heading"><span><i></i><i></i><i></i></span><strong>IR WORKBENCH</strong><small>CAPTURA REAL · DADOS SINTÉTICOS</small></div><img src="workbench-preview.png" alt="Demonstração real do Incident Response Workbench com 16 eventos, linha do tempo e detalhes de um alerta crítico, usando dados sintéticos" width="1280" height="720" loading="lazy" decoding="async"><div class="real-preview-foot"><span>DETECÇÃO → INVESTIGAÇÃO → RELATÓRIO</span><button class="preview-expand" type="button" aria-haspopup="dialog" aria-controls="screenshot-dialog">Ampliar ↗</button></div></div><span class="preview-watermark" aria-hidden="true">01</span></div>
         </div>
 
         <div class="project-grid">
@@ -110,5 +121,7 @@
   </main>
 
   <footer class="site-footer"><div class="container footer-main"><a class="footer-brand" href="#inicio">ARTHUR <span>SOARES</span><i>.</i></a><p>Cibersegurança com curiosidade, método e responsabilidade.</p><div class="footer-links"><a href="https://github.com/ArthurCybSec" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/arthur-soares-753447333/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:arthur.infosec@gmail.com">E-mail ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Arthur Soares. Feito com intenção.</span><span>SANTOS / SP — BRASIL</span><a href="#topo">Voltar ao topo ↑</a></div></footer>
+  <a class="back-to-top" href="#topo" aria-label="Voltar ao topo">↑</a>
+  <dialog id="screenshot-dialog" class="screenshot-dialog" aria-labelledby="screenshot-dialog-title"><div class="dialog-header"><div><span class="mini-label">PROJETO EM FUNCIONAMENTO</span><h2 id="screenshot-dialog-title">Incident Response Workbench</h2><p>Captura real da demonstração com dados sintéticos.</p></div><button class="dialog-close" type="button" aria-label="Fechar imagem ampliada">×</button></div><img src="workbench-preview.png" alt="Tela ampliada do Incident Response Workbench mostrando métricas e linha do tempo" width="1280" height="720" loading="lazy"></dialog>
 </body>
 </html>
