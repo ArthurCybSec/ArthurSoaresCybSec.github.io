@@ -175,8 +175,9 @@ body { background: var(--bg); }
 .method-step:hover { padding-left: 10px; background: #ffffff53; }
 .method-step>b { transition: transform .3s; }
 .method-step:hover>b { transform: translate(3px,-3px); }
+.method-steps { position: relative; }
 @media (min-width: 901px) {
-  .method-steps:before { content: ""; position: absolute; top: 32px; bottom: 36px; margin-left: -32px; width: 1px; background: linear-gradient(var(--blue),#738bb55c); }
+  .method-steps:before { content: ""; position: absolute; top: 32px; bottom: 36px; left: 32px; width: 1px; background: linear-gradient(var(--blue),#738bb55c); }
   .method-step:before { content: ""; position: absolute; width: 8px; height: 8px; left: -36px; top: 30px; border-radius: 50%; background: #527ada; box-shadow: 0 0 0 5px #527ada20; }
 }
 .section-skills { background: #0b1428; }
