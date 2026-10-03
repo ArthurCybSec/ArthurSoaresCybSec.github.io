@@ -53,6 +53,9 @@ navLinks.forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeMenu();
 });
+document.addEventListener('pointerdown', event => {
+  if (nav.classList.contains('open') && !header.contains(event.target)) closeMenu();
+});
 window.addEventListener('resize', () => {
   if (window.innerWidth > 900) closeMenu();
 });

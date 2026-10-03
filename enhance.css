@@ -305,11 +305,11 @@ html[data-theme="light"] .back-to-top { background: #e7effbe8; border-color: #9b
 @media (max-width: 900px) {
   .theme-toggle { order: 2; margin-left: auto; }
   .menu-toggle { background: #1a2949; border-color: #6b86b3; }
-  .primary-nav { order: 4; margin-left: 0; background: #0c1830fa; border-color: #718fc4; }
+  .primary-nav { order: 4; margin-left: 0; background: #0c1830; border-color: #718fc4; }
   .primary-nav a { border-color: #4b668c; }
   html[data-theme="light"] .menu-toggle { background: #e4ebf7; border-color: #8da6d0; }
   html[data-theme="light"] .menu-toggle span { background: #285994; }
-  html[data-theme="light"] .primary-nav { background: #f4f7fcf8; border-color: #adc0dd; }
+  html[data-theme="light"] .primary-nav { background: #f4f7fc; border-color: #adc0dd; }
   html[data-theme="light"] .primary-nav a { border-color: #c1d0e3; }
   .hero-live { margin-bottom: -10px; }
   .real-preview { width: min(90%,720px); margin: 0 auto; }
